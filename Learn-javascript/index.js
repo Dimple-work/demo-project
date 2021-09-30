@@ -101,88 +101,87 @@
  //declare variable using var can acces before declaration but while using let and const cant access
  //use const  unless you know that the value will change. we can use this to declare array,object,function
 //const must initialise with value
- // myName='dimple';
-// var myName;
-// console.log(myName);
-// myname2='dimple';
-// let myname2;
-// console.log(myname2);
+ myName='dimple';
+var myName;
+console.log(myName);
+myname2='dimple';
+let myname2;
+console.log(myname2);
 
-//30-9-2021//
 //function practice
 //block of code that is designed to perform task
 //before we use it we have to define the function
 //follows by function keywod then name then ()then {}
 //used for code resuabiliy define once and use multiple times with diffrent arguments
-// function myfunction(){
-//     var a=30,b=40;
-//     var sum=a+b;
-//     console.log(sum);
-// }
+function myfunction(){
+    var a=30,b=40;
+    var sum=a+b;
+    console.log(sum);
+}
 //will not give any result because we did not call that 
-// function myfunction(){
-//     var a=30,b=40;
-//     var sum=a+b;
-//     console.log(sum);
-// }
-// myfunction(); //result 70
+function myfunction(){
+    var a=30,b=40;
+    var sum=a+b;
+    console.log(sum);
+}
+myfunction(); //result 70
 
 //second define variable outside of the function
-// var a=30,b=40;
-// var c=myfunction();
-// console.log(c);
-// function myfunction(){
-// return a*b;
-// }
+var a=30,b=40;
+var c=myfunction();
+console.log(c);
+function myfunction(){
+return a*b;
+}
 
 //passing  arguments in function
-// myfunction(40,5);
-// function myfunction(a,b){
-//     var c=a/b;
-//     console.log(c);
-// }
+myfunction(40,5);
+function myfunction(a,b){
+    var c=a/b;
+    console.log(c);
+}
 
 //check whether number is divisible by 10 or not
-// var num=100;
-// var evennum=checkdivisible();
-// function checkdivisible(){
-// if(num%10==0){
-// console.log('Given number is divisible by 10');
-// return true;
-// }
-// else{
-//     console.log('Given number is not  divisible by 10');
-// }
-// }
+var num=100;
+var evennum=checkdivisible();
+function checkdivisible(){
+if(num%10==0){
+console.log('Given number is divisible by 10');
+return true;
+}
+else{
+    console.log('Given number is not  divisible by 10');
+}
+}
 
 //same function with diffrent arguments
-// add(20, 30);
-// add(100, 200);
-// add(25.5, 30.2);
-// function add(a,b){
-//     var sum=a+b;
-//     console.log(sum);
-// }
+add(20, 30);
+add(100, 200);
+add(25.5, 30.2);
+function add(a,b){
+    var sum=a+b;
+    console.log(sum);
+}
 
 
 //objects
-//created using curky brackets
-//values ara written in name : value pair
-// var details={
-//     firstname:"Dimple",
-//     lastname:"Malviya",
-//     profession:"web-designer"
-// }
-// console.log(details);
+//created using curly brackets
+// values are written in name : value pair
+var details={
+    firstname:"Dimple",
+    lastname:"Malviya",
+    profession:"web-designer"
+}
+console.log(details);
 //changing  property value
-// details.firstname="dimpi";
-// console.log(details);
+details.firstname="dimpi";
+console.log(details);
 //add property
-// details.age="25";
-// console.log(details);
+details.age="25";
+console.log(details);
 //delete property of object
-// delete details.age;
-// console.log(details);
+delete details.age;
+console.log(details);
 
 //object methods.. objects can have methods
 //methods are actions that are performed on objects
