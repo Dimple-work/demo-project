@@ -164,6 +164,7 @@ function add(a,b){
 }
 
 
+
 //objects
 //created using curly brackets
 // values are written in name : value pair
@@ -186,4 +187,6 @@ console.log(details);
 //object methods.. objects can have methods
 //methods are actions that are performed on objects
 //methods are stored in properties of object
+
+
 
