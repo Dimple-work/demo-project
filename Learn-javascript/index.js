@@ -189,4 +189,150 @@ console.log(details);
 //methods are stored in properties of object
 
 
+let s1 = Symbol();
+console.log(Symbol() == Symbol());
+let s2 = Symbol('event.save');
+console.log(s2.toString());
+let a='fbbfgcb';
+a=+a;
+console.log(a);
+let num=true, num2=20;
+numtotal=num++ +num2;
+console.log(numtotal);
+console.log(!num);
+console.log(num=num<<num2);
+var age=25;
+var allow= age>30? 'noteligible':((age>18)?'eligible':'noteligible');
+console.log(allow);
+var b=30;
+switch(true){
+	case (b<10):	
+	console.log('false');
+	break;
+	case (b==30):
+	console.log('true');
+	break;
+	default:
+	console.log('b is 30');
+}
+var num3=2;
+// while(num3<=20){
+// 	console.log(num3);
+// 	num3=num3+2;
+// }
+do{
+	console.log(num3);
+	num3=num3+2;
+}
+while(num3<=20)
+	let j=1;
+	for (;j<20; j++) {
+    console.log(j);
+}
+let str="  hello ";
+// str=`hiii ${str}`;
 
+console.log(str);
+console.log(str.trimLeft());
+console.log(str.length);
+console.log(str[2]);
+let s = '  welcome  ';
+console.log(s[0]);
+console.log(s);
+console.log(s.trim());
+let counter;
+for (let i=0; i<s.length; i++) {
+// counter=s[i];
+// console.log(counter);
+// console.log(counter);
+}
+// console.log('The number of s found in the string is ' + counter);
+// console.log(s.toLowerCase());
+let str1 = '1234'.padStart(5,'3');
+console.log(str1); 
+let strnew=['hello','hii','sjhf'];
+let strnew1=['bye','go','bye'];
+let result=''.concat(1,2,3,6,4,6,5,6,8);
+console.log(result);
+//split string into words
+var strbrk='hello welcome to the team';
+// var strbrk1=strbrk.split(' ');
+var substr='e';
+console.log(strbrk.lastIndexOf(substr));
+// var userenter=prompt('Enter Something');
+// var convertnum=parseInt(userenter);
+// var check= typeof(userenter);
+// console.log(check);
+// if(typeof(userenter)=='number'){
+// 	alert('Given input is number');
+// }
+// else if(typeof(userenter)=='string'){
+// 	alert('Given input is string');
+// }
+// else{
+// 	alert('Invalid input');
+// }
+// console.log(userenter.length);
+// console.log(userenter);
+// if(!userenter.length) {
+// 	var userenter1 = prompt('Please enter valid input');
+// 	debugger
+// 	if(userenter != NaN) {	
+// 		alert('Given input is string');
+// 	}
+// } else if(isNaN(userenter)){
+// 	console.log(isNaN(userenter));
+// 	alert('Given input is string');
+// } else{
+//  	alert('Invalid input');
+// }
+
+let testarray=[2,5,465,653,548]
+console.log(testarray.length=6);
+console.log(testarray);
+test(6,5);
+function test(a,b){
+	var total=a*b;
+	console.log(total);
+}
+function add(a, b) {
+    return a + b;
+}
+
+let sum = add;
+
+function average(a, b, fn) {
+    return fn(a, b) / 2;
+}
+
+let result1 = average(10, 20, sum);
+//anonymous function 
+console.log(result1);
+let show=function(){
+	console.log('hello welcome');
+}
+show();
+let showo = () =>console.log('hello welcomeerere');
+//exeute function immediately after declaration
+(function(){
+	console.log('anonymous function');
+})();
+let person=[
+{name:'dimple', age:25},
+{name:'dimpi', age:20},
+{name:'dim', age:28}
+];
+let checkage=[];
+checkage=person.filter(function(e){
+	return e.age>20;	
+});
+console.log(checkage);
+
+let newarray= [1, 2, 30, 9, 20, 4, 5, 6, 10, 18, 27];
+let resultarray=[];
+for(var i=0;i<newarray.length;i++){
+	
+	if(newarray[i]%3==0){
+		 resultarray.push(newarray[i]);
+	}
+}
