@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Range Slider</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">		
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<div class="register-form mt-3 mb-3">
+    <div class="container">
+    	<div class="Mainheading text-center">
+    		<h2>Register Now</h2>
+    	</div>
+          <div class="row justify-content-center mt-3">
+            <div class="col-md-6 bg-dark">
+                <form action="#" class="p-4 text-white">
+                  <div class="form-group">
+                      <label for="username"> Name</label>
+                      <input type="text" class="form-control" id="username" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="email"> Email</label>
+                      <input type="email" class="form-control" id="email" value="" required>
+                  </div>
+                 <div class="form-group">
+                      <label for="pwd">Password</label>
+                      <input type="password" class="form-control" id="pwd" value="" required>
+                  </div>
+                    <div class="form-group">
+                      <label for="phoneno"> Phone No</label>
+                      <input type="number" class="form-control" id="phoneno" value="" required>
+                  </div>
+                  <button type="submit" class="btn btn-warning mb-3 mt-3 float-right" onclick="store()">Register</button>
+                </form>
+            </div>
+          </div>
+      </div>
+  </div>
+<!--    <form action="#" class="p-4 text-white">
+                  <div class="form-group">
+                      <label for="username1"> Name</label>
+                      <input type="text" class="form-control" id="username1" value="" required>
+                  </div>
+              </form> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+function store(){
+	var inputname=document.getElementById("username");
+	localStorage.setItem("Username",inputname.value);
+	var inputemail=document.getElementById("email");
+	localStorage.setItem("Email",inputemail.value);
+	var inputpwd=document.getElementById("pwd");
+	localStorage.setItem("Password",inputpwd.value);
+	var inputphone=document.getElementById("phoneno");
+	localStorage.setItem("Phoneno",inputphone.value);
+ let userdata=[];
+ for(var i=0;i<localStorage.length;i++) {
+   userdata.push({
+        username: inputname.value,
+    });
+ }
+ console.log(userdata);
+}
+
+
+</script>
+</body>
+</html>
+
