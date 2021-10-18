@@ -160,7 +160,7 @@ add(100, 200);
 add(25.5, 30.2);
 function add(a,b){
     var sum=a+b;
-    console.log(sum);
+    console.log(sum)
 }
 
 
