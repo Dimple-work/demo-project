@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Range Slider</title>
+<title>Login/Register</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">		
@@ -15,7 +15,7 @@
     	</div>
           <div class="row justify-content-center mt-3">
             <div class="col-md-6 bg-dark">
-                <form action="#" class="p-4 text-white">
+                <form action="login.html" class="p-4 text-white" method="">
                   <div class="form-group">
                       <label for="username"> Name</label>
                       <input type="text" class="form-control" id="username" required>
@@ -49,25 +49,35 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript">
 function store(){
-	var inputname=document.getElementById("username");
-	localStorage.setItem("Username",inputname.value);
-	var inputemail=document.getElementById("email");
-	localStorage.setItem("Email",inputemail.value);
-	var inputpwd=document.getElementById("pwd");
-	localStorage.setItem("Password",inputpwd.value);
-	var inputphone=document.getElementById("phoneno");
-	localStorage.setItem("Phoneno",inputphone.value);
- let userdata=[];
- for(var i=0;i<localStorage.length;i++) {
-   userdata.push({
-        username: inputname.value,
-    });
- }
- console.log(userdata);
+	var inputname=document.getElementById("username").value;
+	var inputemail=document.getElementById("email").value;
+	var inputpwd=document.getElementById("pwd").value;
+	var inputphone=document.getElementById("phoneno").value;
+  var user={Username:inputname,Email:inputemail,Password:inputpwd,Phoneno:inputphone};
+console.log("user details is", user);
+  // console.log(newinout);
+//   var values = [],
+//         keys = Object.keys(localStorage),
+//         i = keys.length;
+//         console.log(keys);
+// for(var i=0, len=localStorage.length; i<len; i++) {
+//     var key = localStorage.key(i);
+//     var value = localStorage[key];
+//     console.log(value);
+// }
+// const user = {
+//   username:inputname.value ,
+//     email: inputemail.value,
+//     password:inputpwd.value,
+//     phoneno:inputphone.value
+// }
+localStorage.setItem('user', JSON.stringify(user));
+localStorage.getItem('user');
+var Users = JSON.parse(localStorage.getItem('Data') || '[]');
+Users.push(user);
+localStorage.setItem( JSON.stringify(Users)); 
 }
-
 
 </script>
 </body>
 </html>
-
