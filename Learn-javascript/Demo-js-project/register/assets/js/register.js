@@ -5,10 +5,11 @@ function signUp(){
 	let userPhone = document.getElementById("userPhone").value;
   let user ={name:userName, email:userEmail, password:userPassword, phone:userPhone};
 console.log("user details is", user);
-localStorage.setItem('user', JSON.stringify(user));
-localStorage.getItem('user');
-let Users = JSON.parse(localStorage.getItem('Data') || '[]');
+debugger
+localStorage.setItem('user', btoa(user));
+atob(localStorage.getItem('user'));
+let Users = atob(localStorage.getItem('Data') || '[]');
 Users.push(user);
-localStorage.setItem('Data',JSON.stringify(Users)); 
+localStorage.setItem('Data',btoa(Users)); 
 console.log(Users);
 }
