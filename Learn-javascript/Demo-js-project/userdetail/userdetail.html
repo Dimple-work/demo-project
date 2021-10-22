@@ -14,23 +14,16 @@
     		<h2>Welcome</h2>
     	</div>
         <div class="row justify-content-center">
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <div class="userdata">
                 <div class="">
-                  <p>UserName:</p>
-                  <p>Email:</p>
-                  <p>Password:</p>
-                  <p>Phone-No:</p>
-                </div>                  
+                  <p>UserName:<span id="userName"></span></p>
+                  <p>Email: <span id="userEmail"></span></p>
+                  <p>Password: <span id="userPassword"></span></p>
+                  <p>Phone-No:<span id="userPhone"></span></p>
+                </div>   
+                <button type="button" onclick="signOut()">Log Out</button>               
                 </div>
-            </div>
-            <div class="col-md-3">
-               <div class="userdata">
-                <p id="userName"></p>
-                <p id="userEmail"></p>
-                <p id="userPassword"></p>
-                <p id="userPhone"></p>
-               </div>
             </div>
         </div>
       </div>
